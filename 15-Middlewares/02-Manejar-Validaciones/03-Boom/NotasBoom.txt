@@ -1,0 +1,9 @@
+BOOM:
+Es una libreria que viene del ecosistema de
+hapiJS que se podria decir que es la 
+competencia de ExpressJS.
+
+PARA QUE SIRVE BOOM(HTTP-friendly error
+objects):
+Nos permite enviar errores de una forma
+mas agradable.

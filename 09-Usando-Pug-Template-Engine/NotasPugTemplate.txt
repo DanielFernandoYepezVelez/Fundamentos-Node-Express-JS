@@ -1,0 +1,10 @@
+PUG:
+Las etiquetas se deben indentar y pug va mostrando una a una
+de acuerdo a la indentación que tenga.
+
+Las variables se muestran con un igual despues de escribir la
+etiqueta ejemplo => strong= product.
+
+El texto plano que se agrega dentro de una etiqueta se escribe
+sin igual despues de la etiqueta ejemplo => strong holaAmigos.
+---------------------------------------------------------------

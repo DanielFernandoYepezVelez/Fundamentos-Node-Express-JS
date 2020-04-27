@@ -1,0 +1,32 @@
+QUE ES UN TEMPLATE ENGINE:
+Es una combinación de software que sirve
+para mezclar datos y un template, además
+mediante el template engine generamos un 
+documento que puede ser HTML.
+
+Me sirve para tratar los datos y ejecutar
+estructuras Algoritmicas en las vistas o 
+documentos HTML.
+-------------------------------------------
+
+TEMPLATE ENGINE:
+hbs (JAVASCRIPT).
+jsp (JAVA).
+-------------------------------------------
+
+CREANDO PROPIO TEMPLATE ENGINE EN EXPRESS:
+app.engine('ext', function(filePath, options, callback) {});
+app.set('views', './views'); especificar el directorio de vistas.
+app.set('view engine', 'ext'); registrar el template engine.
+
+Express permite tener varios engines, depende de la extención que
+asignemos en el registro del template ese vamos a usar.
+------------------------------------------------------------------
+
+NODE:
+Los callbacks en nodeJS son error-first, es decir,
+siempre lo primero que devuelven son los errores.
+--------------------------------------------------
+
+BUSCAR Y ENTENDER SOBRE EL TEMA DE CREAR LOS PROPIOS
+TEMPLATE ENGINES.

@@ -1,0 +1,28 @@
+dotenv (npm i dotenv)
+Es una dependencia que despues de instalar
+en el proyecto debo requerirla y ejecutar
+su metodo config() y esto lo que permite
+hacer es lo siguiente: tomar todas las 
+variables o información que se encuentra
+en los archivos .env y .env.example y 
+moverla a las variables de entorno 
+respectivas.
+La sintaxis es la siguiente:
+require('dotenv').config();
+------------------------------------------
+
+VARIABLES DE ENTORNO:
+Son variables que solo existen en el 
+sitema operativo (O.S) en el que esta
+corriendo el aplicativo Actualmente.
+Por lo que estas variables de entorno
+son un mecanismo de seguridad, por que
+permite que los valores o información
+del los archivos .env NO esten expuestos
+y otras personas las puedan tomar, por
+ejemplo:
+
+process.env.NODE_ENV
+process.env => Variable de entorno.
+NODE_ENV => Nombre de la variable de entorno.
+----------------------------------------------

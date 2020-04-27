@@ -1,0 +1,87 @@
+REQUEST OBJECT:
+El objeto req(Request) en Express representa el
+llamado HTTP y tiene diferentes propiedades del llamado,
+como la cadena de texto query(Query params),
+los parámetros de la URL(URL params), 
+el cuerpo(Body), los encabezados(HTTP headers), etc.
+
+Para acceder al req basta con acceder al primer parámetro
+de nuestros router handlers(router middleware) ó 
+middlewares.
+QUE SON LOS ROUTER HANDLERS O MIDDLEWARES:
+Son las rutas que definimos en nuestras APIs,
+como lo muestra el siguiente ejemplo:
+app.get('/user/:id', function(req, res, next) {
+  res.send('user ' + req.params.id);
+});
+
+DEFINICIÓN PERSONAL:
+El req(REQUEST) es un objeto que se ejecuta
+cuando se hace una petición desde un navegador
+a un servidor, este objeto req, puede
+llegar lleno o vacio, todo depende del tipo de 
+petición o llamado HTTP que estemos haciendo y
+los valores que le agreguemos a la misma.
+Los tipos de peticiones HTTP que hacen parte del
+objeto req son:
+URL PARAMS.
+QUERY PARAMS.
+HEADER PARAMS.
+BODY PARAMS.
+------------------------------------------------------
+
+REQUEST OBJECT ENTENDER LA DATA QUE LE ENVIAMOS:
+Cuando hacemos un request y enviamos datos hacia ese
+objeto, el puede interpretar que tipo de datos le estamos
+enviando(Json, multipart/form-data || application/json, 
+application/x-www-form-urlencoded), GRACIAS a los 
+MIDDLEWARES.
+Estos middlewares son los que nos ayudan a entender
+el tipo de  datos que vamos a recibir en el req.
+-------------------------------------------------------
+
+URL PARAMS:
+Son los que se establecen en la url
+anticipados con dos puntos, ejemplo =>
+'/:productId'.
+
+Esta propiedad contiene un objeto con las propiedades
+equivalentes los parámetros nombrados en la ruta.
+Por ejemplo si tenemos una ruta de la forma /user/:name
+entonces la propiedad name esta disponible como 
+req.params.name y alli podremos ver su valor, supongamos
+que llamáramos la ruta con /user/glrodasz, entonces el 
+valor de req.params.name seria glrodasz. Este objeto 
+por defecto tiene el valor de un objeto vacío {}.
+---------------------------------------------------------
+
+QUERY PARAMS:
+Son los que establecemos en la url
+como query params con un signo de
+interrogación, Atributo-valor y además
+separando diferentes parametros con 
+ampersan(&), ejemplo =>
+http://localhost:3000/api/products?tags[]=cheap&$tags[]=expensive
+
+Esta propiedad contiene un objeto con las propiedades
+equivalentes a las cadenas de texto query de la ruta.
+Si no hay ninguna cadena de texto query tendrá como
+valor por defecto un objeto vacío {}.
+---------------------------------------------------------
+
+HEADER PARAMS:
+---------------------------------------------------------
+
+BODY PARAMS:
+Son los que vienen en una petición añadidos
+al cuerpo(formularios) generalmente en un documento
+Json(); pueden venir en diferentes
+formatos, por ejemplo cuando es un objeto
+es un multipart/form-data.
+
+Contiene los pares de llave-valor de los datos 
+enviados el cuerpo(body) del llamado (request). Por
+defecto es "undefined" pero es establecido cuando se 
+usa algún “body-parser” middleware como body-parser 
+y multer.
+-----------------------------------------------------------

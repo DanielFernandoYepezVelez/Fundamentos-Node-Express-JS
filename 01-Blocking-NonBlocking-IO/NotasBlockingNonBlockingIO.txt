@@ -1,0 +1,19 @@
+En el desarrollo existen dos tipos de lenguajes Backend, que son los lenguajes BLOCKING y los lenguajes NON-BLOCKING, veamos la diferencia entre cada uno de ellos:
+
+LENGUAJES BLOCKING =>
+Son lenguajes con una lectura de ejecución sincrona, es decir, que no se va a ejecutar una linea numero 2, sin antes ejecutarse una linea numero 1, por que el lenguaje no lo permite, inmediatamente lo bloquea hasta que no termine la tarea numero 1, no se ejecuta la tarea numero 2.
+
+LENGUAJES NON-BLOCKING =>
+Este es el caso de Node JS, y hace referencia a los lenguajes con una lectura de ejecución asincrona, es decir, se puede ejecutar una linea numero 2, sin haber terminado la ejecución de una linea numero 1, pero la linea numero 1 se puede ejecutar Tambien en un tiempo diferente y la linea numero 3 en otro tiempo o al mismo tipo que la linea numero 2 y así sucesivamente, por que el lenguaje lo permite al no bloquear ningun proceso de ejecución.
+
+Tambien se puede asociar con la ejecución de diferentes tareas que inician al mismo tiempo, pero su finalización es en tiempos diferentes, más nunca se detiene ninguna ejecución de dichas tareas, sin importar que una halla terminado o ni siquiera halla empezado.
+
+En conclusion, una petición a una API puede ir por un lado y escribir en un archivo con extención .txt puede ir por otro.
+
+CONTROLAR PROCESOS DE EJECUCIÓN NON-BLOCKING =>
+Esta caracteristica de los lenguajes NON-BLOCKING, permiten generar procesos de ejecución asyncronos, pero en JavaScript existes diferentes maneras de controlar estos procesos asyncronos:
+
+Las funciones con las cuales se puede controlar estos procesos asyncronos, NO son asyncronas y son las siguientes:
+CALLBACKS.
+PROMESAS.
+ASYNC-AWAIT.

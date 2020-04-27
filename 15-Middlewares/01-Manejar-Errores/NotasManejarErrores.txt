@@ -1,0 +1,30 @@
+MANEJAR ERRORES EN EXPRESS:
+Una de las mejores formas de manejar ERRORES
+en express es utilizando un middleware.
+Para esto express nos provee un middleware
+común y corriente pero tiene algo especial y
+eso es un cuarto parametro que es el "err",
+veamos un ejemplo:
+
+function errorHandler(err, req, res, next) {
+  res.status(err.status || 500);
+  res.render("error", {error: err})
+}
+
+Si no se tienen estos 4 parametros express no va 
+a detectar que es un middleware que va a manejar
+un error.
+
+NEXT:
+Este callback captura el error y va a llamar 
+otro error que hayamos definido, si no se ha
+definido ningun otro error lo que hace este
+callback es llamar el error nativo que viene
+en express.
+
+MOSTRAR EL STACK O NO:
+En este caso debemos tener en cuenta si estamos
+en desarrollo o en producción para mostrar el
+stack(Es la ruta de donde viene el error).
+Esto lo podemos hacer gracias a la variable
+de entorno NODE_ENV.

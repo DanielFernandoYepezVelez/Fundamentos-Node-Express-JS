@@ -1,0 +1,37 @@
+VALIDACIÓN DE DATOS USANDO UN MIDDLEWARE:
+Con esta validación estamos verificando que el envio
+de datos a nuestras end-points que no corresponden
+al schema(Modelo De La Base De Datos) que tenemos
+sean rechazadas y exista un advertencia que no permita
+ingresar los datos al schema de la base de datos.
+
+VAMOS IMPLEMENTAR UNA FUNCTION DE TIPO CLOSURE:
+QUE SON LOS CLOSURES:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
+
+La function CLOSURE devuelve otra function, en este caso
+la funciton que va a devolver va a ser mi MIDDLEWARE.
+
+Pero Necesito que sea un CLOSURE por que necesito 
+grabar el schema que es mi primer parametro y el
+schema es simplemente las reglas de como deben ser
+nuestros datos.
+
+El segundo parametro es donde voy a verificar el 
+request, por defecto mi check va a ser el 'body'.
+
+Lo que va a ser basicamente es a mi function 
+validateHandler le voy a pasar que parte del request
+quiero validar en el ejemplo por defecto seria el 
+body y el schema como primer parametro
+
+" FUNCTION CLOSURE "
+funciton validationHandler(schema, check = 'body') {
+  return function(req, res, next) {
+    const error = validate(req[check], schema)
+    error ? next(new Error(error)) : next()
+  }
+}
+
+Mas Adelante Joi Se Va a encargar de validar los
+datos.

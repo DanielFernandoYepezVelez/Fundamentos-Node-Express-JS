@@ -1,0 +1,31 @@
+IMPLEMENTANDO ACCIONES CRUD CON MONGODB:
+
+REALCIÓN DE LOS METODOS HTTP CON MONGODB:
+1.READ:
+.find(query, projection); leer varios
+productos.
+.findOne(query, projection); leer un solo
+producto.
+
+PARAMETROS:
+query: Consulta a la BD.
+projection: Basicamente son los campos
+de la BD que queremos incluir en el
+query(consulta).
+
+2.CREATE:
+.insertOne(document, options);
+
+3.UPDATE:
+.updateOne(filter, update. options);
+
+4.DELETE:
+.deleteOne(filter, options);
+
+NOTA=>
+Anteriormente teniamos unos metodos de 
+remove e insert, pero en las ultimas
+versiones de mongoDB todo esto cambio
+y los metodos de mongoDB mencionados
+anteriormente son los mas apropiados para
+usar.

@@ -1,0 +1,10 @@
+Son modulos, paquetes o dependencias que ya vienen instaladas en nodeJS y no se requieren descargar.Simplemente deben ser llamados donde se van a ejecutar o implementar, algunos paquetes nativos son:
+
+MODULE =>
+Es un objeto que tenemos disponible y podemos acceder desde toda aplicaciòn o proyecto de Node JS, ya sea que utilice una libreria o framework como expressJS o hapiJS.Este objeto tiene diferentes propiedades como por ejemplo un id, path, entre otros, pero el que nos interesa es la propiedad exports, esta propiedad esta inicializada con un objeto vacio y alli, es donde vamos a ingresar todas las clases, funciones, objetos o elementos que necesitemos utilizar en cualquier parte del proyecto.
+
+PROCESS =>
+Es un objeto similar al anterior y es creado por Node JS, solamente es accederlo con destructuring o notacion normal(.), pero ademas este objeto es muy importante por que tiene acceso al sistema operativo del equipo para configurar las variables de entorno del proyecto.
+
+Tenemos muchos modulos de nodeJS, ver la DOCUMENTACIÓN:
+DOCUMENTACIÓN => https://nodejs.org/dist/latest-v12.x/docs/api/

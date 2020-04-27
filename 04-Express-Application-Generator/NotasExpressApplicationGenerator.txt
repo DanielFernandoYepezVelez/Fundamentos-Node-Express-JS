@@ -1,0 +1,36 @@
+EXPRESS APPLICATION GENERATOR =>
+
+Esta funcionalidad me sirve para que crear
+un proyecto desde cero con express y un 
+motor de plantillas o Template Engine como
+por ejemplo hbs o pug, hasta el momento
+se de esos dos, aunque tambien se que el
+Template Engine ejs viene por defecto con express.
+
+Tener en cuenta que nosotros tambien podemos
+desarrollar un propio motor de plantillas.
+
+1.INSTRUCCION PARA INSTALAR EL GENERADOR
+DE EXPRESS APPLICATION DE FORMA GLOBAL:
+npm i express-generator -g
+
+2.CREAR EL PORYECTO COMPLETO CON EL MOTOR
+DE PLANTILLAS PUG:
+express --view=pug 01-Express-Application-Generator
+
+3.Movernos a la carpeta donde creamos el proyecto
+que en este caso es:
+01-Express-Application-Generator
+
+4.INSTALAR DEPENDENCIAS:
+npm install
+
+5.CORRER APLICACIÓN:
+DEBUG=01-express-application-generator:* npm start
+---------------------------------------------------
+
+NODE_ENV=porduction O NODE_ENV=development
+Cuando estamos en producción se muestran mensajes
+no tan especificos como en desarrollo.
+(error handler).
+---------------------------------------------------

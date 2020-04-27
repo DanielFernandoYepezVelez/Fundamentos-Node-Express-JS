@@ -1,0 +1,82 @@
+ARQUITECTURA MVC:
+Modelo-Vista-Controlador se ha utilizado a lo largo 
+de la historia para desarrollar aplicaciones web, pero
+hoy en día se ha quedado corto.
+Algunos autores de frameworks como laravel dicen que
+MVC deberia ser llamado mejor SEPARADOR DE PROBLEMAS.
+por que esta tecnica(MVC) no es suficiente para la
+complejidad de las aplicaciones.
+------------------------------------------------------
+
+EXPLICANDO LA ARQUITECTURA DE LA IMAGEN:
+MODELO => El modelo es lo que yo llamo
+el paquete de librerias.El paquete de 
+librerias es el encargado de conectarse con
+librerias externas como por ejemplo:
+BASES DE DATOS.
+BASES DE DATOS EN LA NUBE.
+U OTRAS APIs EXTERNAS o INTERNAS.
+
+VISTA => La vista realmente esta representada
+por los datos que enviamos o recibimos por
+parte del controlador.
+
+CONTROLADOR => La función del controlador
+es recibir y enviar datos a las vista.
+En el caso de express el controlador esta
+representado por los Middlewares y los
+routes o rutas que se han venido implementando.
+Tambien debemos tener encuenta que este
+paquete no solo se encarga de la vista sino
+tambien de las APIs, pues en el caso de las
+APIs recibe y envia documentos Json.
+
+SERVICES => Es el corazon de nuestra aplicación,
+Basicamente es la logica del negocio, en conclusión
+es por lo que nos van a pagar.
+Los servicios se encargan no solo de llamar el
+paquete de las librerias, sino tambien llamar otros
+servicios.
+-----------------------------------------------------
+
+EXPLORANDO EL FLUJO DE ESTA ARQUITECTURA:
+Sea que se genere un llamada por una vista o una
+APIs, siempre el que recibe esa infromación es el 
+CONTROLADOR y su unica tarea es pasarle esta infromación
+a los SERVICIOS, los SERVICIOS deciden que hacer con la
+información que les acaba de llegar como por ejemplo:
+Si van a llamar otros servicios.
+Si van a aplicar una logica del negocio.
+Si van a aplicar reglas de seguridad, ETC.
+Cuando ya se tenga claro ese tema, entonces los 
+SERVICES llaman al paquete de las LIBRERIAS.
+La logica que debe tener este paquete(MODELO) debe
+ser unica y exclusivamente para el consumo de datos,
+ejemplo:
+Libreria para llamar datos en Mongo.
+Libreria para llamar datos en Firebase.
+Libreria para llamar datos en Mysql.
+Libreria para llamar datos en PosgreSQL.
+Tambien para llamar otra API interna o externa.
+De ser necesario se pueden incluir muchas mas capas,
+todo depende de lo que se necesite.
+
+NOTA SERVICES => para implementar la logica se pueden
+hacer con funciones o clases, no es obligatorio alguna 
+de las dos formas.
+-----------------------------------------------------
+
+LINKS PARA MAS INFORMACIÓN:
+https://styde.net/porque-laravel-no-es-mvc-y-tu-deberias-olvidarte-de-mvc/
+https://twitter.com/taylorotwell/status/262290285499936768
+https://www.youtube.com/watch?v=kp-NOggyz54
+https://marketplace.visualstudio.com/items?itemName=jakob101.RelativePath
+-----------------------------------------------------
+
+MIDDLEWARE body-parser: (npm i body-parser)
+Es un modulo muy importante para procesar datos que vienen
+en un formato Json, Si queremos procesar datos en otro formato
+podemos usar otros Middlewares. Datos que se envian en un request
+por un metodos post al servidor.
+Porque express por defecto no sabe que es un Json();
+-----------------------------------------------------

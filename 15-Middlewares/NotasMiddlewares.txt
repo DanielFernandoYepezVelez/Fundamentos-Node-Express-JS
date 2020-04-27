@@ -1,0 +1,53 @@
+MIDDLEWARES:
+Es Una Función que esta compuesta por tres Argumentos
+y son los siguientes:
+REQUEST OBJECT,
+RESPONSE OBJECT,
+Y un CALLBACK llamado next() que cuando se invoca llama
+al siguiente middleware.
+
+PARA QUE SIRVEN:
+Generalmente se utiliza para realizar modificaciones
+al REQUEST y al RESPONSE OBJECT y dichas modificaciones
+pueden ser:
+VALIDACIONES.
+MANEJO DE ERRORES.
+CUALQUER COSA REALMENTE.
+Lo más importante de un middleware es llamar el
+CALLBACK next().
+-------------------------------------------------------
+
+TIPOS DE MIDDLEWARES:
+3rd party middleware => Un ejemplo
+es el body-parser.
+
+COMO FUNCIONA EL MIDDLEWARE body-parser:
+Cuando lo incluimos en nuestra aplicación
+el lo que hace es interceptar el REQUEST(req) OBJECT
+y verificar si tiene un body(cuerpo) y además
+ese body necesita ser formateado a un JSON()
+y aplicar lo que se requiera para que dicho
+formateo funcione gracias al body-parser.
+-----------------------------
+
+Router level middleware => Son las rutas que
+aplicamos para las APIs y las vistas.
+
+DONDE LO IDENTIFICAMOS:
+En los controladores cuando ejecutamos el
+codigo asincrono la manera de capturar
+el error en caso de que este exista es con
+el next(error).
+-----------------------------
+
+application level middleware => Lo tenemos en el
+express static que se usa con el
+app.use();
+-----------------------------
+
+Built-in => Estos middlewares vienen
+integrados con express
+-----------------------------
+
+Error-handling => Faltan por explicar.
+------------------------------------------------

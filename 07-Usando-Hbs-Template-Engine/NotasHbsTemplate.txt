@@ -1,0 +1,15 @@
+HBS:
+Tuvimos que agregar un tipo de wrapper llamado
+consolidate al mismo tiempo que handlebars
+
+Las etiquetas funcionan normal, los ciclos
+y posiblemente las estructuras Algoritmicas
+van dentro de llaves y posteriormente pero
+internamente va un simbolo de gato para estas
+estructuras y se cierran con llaves y posteriormente
+pero de forma interna tambien va una diagola y por
+ultimo la instrucción algoritmica.
+
+Las variables van dentro de llaves y no 
+llevan ningun simbolo de gato o numeral.
+-----------------------------------------------------

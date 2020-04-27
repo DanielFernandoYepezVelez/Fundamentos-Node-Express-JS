@@ -1,0 +1,5 @@
+MOCKS:
+Son datos quemados o establecidos en el proyecto
+que me sirven de prueba, para comprobar que las
+Rest-api funcionen correctamente, es decir,
+son Datos que no vienen de una Base de datos.

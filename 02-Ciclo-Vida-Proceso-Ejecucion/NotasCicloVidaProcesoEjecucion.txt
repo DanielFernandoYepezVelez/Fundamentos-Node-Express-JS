@@ -1,0 +1,21 @@
+Node JS es un lenguajes de programación Orientado a EVENTOS.
+
+CICLO DE VIDA DE UN PROCESO DE EJECUCIÒN =>
+Node JS pasa por tres etapas a la hora de ejecutar un proceso, tarea, indicación o funcionalidad y asi darle un inicio de vida y un fin de vida a dicho proceso y son las siguientes:
+
+PILA DE PROCESOS(Call Stack) =>
+1.Cuando Ejecutamos node 'nombreArchivo' se crea el proceso main o el metodo o funcion principal como se conoce en otros lenguajes de programaciòn.
+
+2.Este metodo o proceso main() va a empezar a ejecutar linea a linea de nuestro codigo, pero el codigo que se va a ejecutar de forma secuencial o continua es un codigo donde las sentencias no tenga que salir de la pila de procesos, como por ejemplo variables o mostrar por consola, pero para realizar llamados a otros procesos, APIS, bases de datos o procesos asincronos en general;entrarian a participar otras dos etapas.
+
+3.Cada vez que una linea sea llamada se ejecuta y luego se elimina de la pila de procesos y cuando no existan mas sentencias, se elemina el metodo, funcion o proceso main().
+
+4.Cuando estemos trabajando con funciones de tareas sincronas es muy similar, solo que Node JS, va a empezar a trabajar con la funcion y cuando empiece a trabajar con dicha funcion se va a empezar a llamar su contenido interno a la pila de procesos o Call Stack.
+
+NODE APIS =>
+5.Aqui llegan TODAS las funciones, procesos o tareas asincronas que se identifican en la pila de procesos o Call Stack. En dicha pila estas tareas se registran, pero no se eliminan, si no que se envian a esta nueva etapa de node JS.
+
+COLA DE CALLBACKS(Cola De Tareas) =>
+6.Aqui llegan todos los procesos, fuciones, metodos o tareas asincronas que han pasado por la etapa de NODE APIS y ya estan listas para ser ejecutadas, pero no pueden ejecutarsen hasta que la pila de procesos o Call Stack termine su ejecuciòn por completo y el metodo main este libre o vacio, para ser retirado y poder ejecutar los CALLBACKS de la Cola de tareas o COLA DE CALLBACKS.
+
+7.Las funciones que estan en la COLA de CALLBACKS se van ejecutando en el mismo orden en que van llegando.

@@ -1,0 +1,7 @@
+JOI:
+Es una libreria que viene del ecosistema de
+hapiJS que se podria decir que es la 
+competencia de ExpressJS.
+
+QUE ES JOI(Object Schema Validation):
+Es un validador de esquemas de objetos.
