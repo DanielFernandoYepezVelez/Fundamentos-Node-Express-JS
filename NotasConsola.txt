@@ -1,0 +1,2 @@
+Para que nodemoon escuche un cambio en algunos de estos archivos que termine con alguna de las extenciones mecionadas =>
+nodemon Nombrearchivo -e js, hbs, css, html

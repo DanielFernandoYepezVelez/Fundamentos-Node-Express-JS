@@ -4,9 +4,22 @@ para mezclar datos y un template, además
 mediante el template engine generamos un 
 documento que puede ser HTML.
 
+PARA QUE ME SIRVE UN TEMPLATE ENGINE:
 Me sirve para tratar los datos y ejecutar
 estructuras Algoritmicas en las vistas o 
-documentos HTML.
+documentos HTML. Pero principalmente
+por el tema de los partials o componentes, por que
+me permiten reutilizar diferentes fragmentos de codigo,
+y no tengo que volver a copiar y pegar el mismo
+codigo por si tengo mas de una vista, Esto no es
+posible hacer solo con HTML, si bien JavaScript
+le agrega la interactividad necesaria, necesito
+los partials principalmente por la reutilizacion
+de codigo html para distintas vistas y ademas
+los template engines, permite agregan interactividad
+y manejo facil de los datos por medio de las estrucutras
+algoritmicas, por el contrario, con javascript tendria que
+hacer petciones con AJAX, fetch API a las Rest API.
 -------------------------------------------
 
 TEMPLATE ENGINE:

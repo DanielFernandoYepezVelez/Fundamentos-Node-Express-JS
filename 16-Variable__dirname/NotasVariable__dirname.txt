@@ -1,0 +1,2 @@
+
+__dirname => Muestra la ruta o el path donde se esta ejecutando el archivo, donde se esta solicitando esta variable y esto es bueno por que cuando la aplicación este en producción, no se puede saber cual es la url donde se esta ejecutando el archivo principal de la app, entonces le decimos al servidor donde estan almacenados los archivos de la app, lo siguiente "no se cual es el path que tengas, pero concatenale lo siguiente + '/url', lo siguiente es la carpeta publica de los archivos que interpreta el navegador o tambien pueden ser las vistas de un TEMPLATE ENGINE".
